@@ -47,7 +47,7 @@ class Help:
         self.dismiss_btn.grid(row=2, pady=10)
 
     def close_help(self):
-        self.help_box_destroy()
+        self.help_box.destroy()
 
 
 if __name__ == "__main__":
@@ -55,3 +55,4 @@ if __name__ == "__main__":
     root.title("Temperature Convertor")
     something = Convertor()
     root.mainloop()
+
