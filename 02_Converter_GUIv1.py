@@ -5,9 +5,13 @@ import random
 
 class Converter:
     def __init__(self):
+        # Formatting variables
         background_color = "light blue"
+
+        # Converter frame
         self.converter_frame = Frame(width=300, bg=background_color, pady=10)
         self.converter_frame.grid()
+        # Temperature Converter Heading (row 0)
         self.temp_heading_label = Label(self.converter_frame,
                                         text="Temperature Converter",
                                         font="Arial 16 bold",
@@ -15,6 +19,7 @@ class Converter:
                                         padx=10, pady=10)
         self.temp_heading_label.grid(row=0)
 
+        # User instructions (row 1)
         self.temp_instructions_label = Label(self.converter_frame,
                                              text="Type in the amount to be "
                                                   "converted and then push "
@@ -25,6 +30,7 @@ class Converter:
                                              padx=10, pady=10)
         self.temp_instructions_label.grid(row=1)
 
+        # Temperature entry box (row 2)
         self.to_convert_entry = Entry(self.converter_frame, width=20,
                                       font="Arial 14 bold")
         self.to_convert_entry.grid(row=2)
@@ -43,12 +49,14 @@ class Converter:
                                   bg="LemonChiffon4", padx=10, pady=10)
         self.to_f_button.grid(row=0, column=1)
 
+        # Answer label (row 4)
         self.converted_label = Label(self.converter_frame,
                                      font="Arial 14 bold",
                                      fg="purple", bg=background_color,
                                      pady=10, text="Conversion goes here")
         self.converted_label.grid(row=4)
 
+        # History / Help button frame (row 5)
         self.hist_help_frame = Frame(self.converter_frame)
         self.hist_help_frame.grid(row=5, pady=10)
 
